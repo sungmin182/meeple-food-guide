@@ -34,12 +34,12 @@ export default function RestaurantModal({ restaurant, isOpen, onClose }: Restaur
   const rankInfo = getRankLabel(restaurant.rank);
   
   const handleNaverMap = () => {
-    const url = `https://map.naver.com/v5/search/${encodeURIComponent(restaurant.name + " " + restaurant.address)}`;
+    const url = `https://map.naver.com/p/search/${encodeURIComponent(restaurant.name)}`;
     window.open(url, "_blank");
   };
 
   const handleKakaoMap = () => {
-    const url = `https://map.kakao.com/?q=${encodeURIComponent(restaurant.name + " " + restaurant.address)}`;
+    const url = `https://map.kakao.com/?q=${encodeURIComponent(restaurant.name)}`;
     window.open(url, "_blank");
   };
 
